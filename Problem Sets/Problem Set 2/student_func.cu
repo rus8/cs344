@@ -117,13 +117,13 @@ void gaussian_blur(const unsigned char* const inputChannel,
   // GPU memory:
 
   // Store filter in shared mem
-//  extern __shared__ float shared_filter[]; // Size should be specified as launch config arg
-//  if (threadIdx.x < filterWidth*filterWidth){
-//    shared_filter[threadIdx.x] = filter[threadIdx.x];
-//  }
-//  __syncthreads();
+  extern __shared__ float shared_filter[]; // Size should be specified as launch config arg
+  if (threadIdx.x < filterWidth*filterWidth){
+    shared_filter[threadIdx.x] = filter[threadIdx.x];
+  }
+  __syncthreads();
 
-  const float * shared_filter = filter;
+//  const float * shared_filter = filter;
 
   // Idea: Store in shared memory slice of array required for this block of threads -
   // submatrix of filterWidth rows and all columns.  
