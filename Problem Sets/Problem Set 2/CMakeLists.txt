@@ -7,8 +7,13 @@
 
 # collect source files
 
+find_package(CUDA REQUIRED)
+find_package(OpenCV REQUIRED)
+
 file( GLOB  hdr *.hpp *.h )
 file( GLOB  cu  *.cu)
 SET (HW2_files main.cpp reference_calc.cpp compare.cpp)
     
 CUDA_ADD_EXECUTABLE(HW2 ${HW2_files} ${hdr} ${cu})
+
+target_link_libraries(HW2 ${OpenCV_LIBS} ${CUDA_LIBRARIES})
