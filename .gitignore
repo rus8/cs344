@@ -22,3 +22,14 @@
 build
 bin
 
+# YCM
+.ycm_extra_conf.py
+
+# Outputs
+*.png
+
+# CMake and make
+*/CMakeFiles/
+*.cmake
+CMakeCache.txt
+Makefile
