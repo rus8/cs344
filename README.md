@@ -26,7 +26,7 @@ CUDA programming model:
 * Host-device paradigm
 * Host allocates mem on device, copies data in both directions, and launches kernels
 * Launch configuration parameters specify how many threads run in a block, and how many blocks to run `kernel<<<grid_size, block_size>>>`
-
+___
 ### Lecture 2
 Communication Paterns:
 * Map (one-to-one)
@@ -48,5 +48,5 @@ Programming details:
 Syncronization. 
 * `__syncthreads()` - barrier
 * Atomic operations
-
+___
 ### Lecture 3
