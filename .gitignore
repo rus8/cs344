@@ -29,7 +29,11 @@ bin
 *.png
 
 # CMake and make
-*/CMakeFiles/
+CMakeFiles/
 *.cmake
 CMakeCache.txt
 Makefile
+
+# CLion
+cmake-build-debug/
+.idea/
