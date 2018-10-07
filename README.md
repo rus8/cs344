@@ -50,3 +50,11 @@ Syncronization.
 * Atomic operations
 ___
 ### Lecture 3
+Reduce:
+* Data
+* Reduce operator - binary & associative
+* 3 times less global memeory bandwidth with using of shared memory
+
+Scan:
+* Scan operator - binary & associative
+* Identity for the operator
