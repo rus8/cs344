@@ -50,11 +50,33 @@ Syncronization.
 * Atomic operations
 ___
 ### Lecture 3
-Reduce:
+Complexity:
+* Step (steps of parellel operations)
+* Work (total operations)
+
+Reduce (sum of all elements):
 * Data
-* Reduce operator - binary & associative
+* Reduce operator - binary & associative 
 * 3 times less global memeory bandwidth with using of shared memory
 
-Scan:
+Scan exclusive and inclusive (sum of previous elements):
 * Scan operator - binary & associative
 * Identity for the operator
+* Scheme:
+```
+ I    I    I
+ |    |    |
+ V    V    V
+ O -> O -> O ...
+```
+* Algorithms
+
+| Name               | Step efficency | Work efficiency| Type     |
+| --------------     |:--------------:| :-------------:|:--------:|
+| **Hillis + Steele**|     **+**      |                | Inclusive|
+| **Blelloch**       |                |     **+**      | Exclusive|
+
+
+Histogram through Reduce
+
+
